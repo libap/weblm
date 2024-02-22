@@ -1651,12 +1651,13 @@ body {
 
 .social-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center; /* Aligner horizontalement au centre */
   list-style: none;
   padding-top: 50px;
-  gap: 20px;
+  gap: 30px;
+  margin: auto; /* Centrer horizontalement */
 }
 
 .social-link {
@@ -1670,6 +1671,8 @@ body {
   margin-right: 10px; /* Marge à droite des icônes pour l'espace */
   font-size: var(--fs-1); /* Taille des icônes */
 }
+
+
 
 
 
