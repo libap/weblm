@@ -62,6 +62,11 @@
   --fs-5: 1.5rem;
   --fs-6: 1.4rem;
   --fs-7: 1.3rem;
+  --fs-8: 2rem;
+  --fs-9: 1.8rem;
+  --fs-10: 1.5rem;
+  --fs-11: 1.4rem;
+  --fs-12: 1.3rem;
 
   --fw-500: 500;
   --fw-600: 600;
@@ -1421,11 +1426,16 @@ body {
 }
 
 
+/*-----------------------------------*\
+  #PRELOADER
+\*-----------------------------------*/
+
 .processusContainer{
-  padding-top: 50px;
+
 }
 
 .ulProcessus{
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -1481,4 +1491,90 @@ body {
     opacity: 0;
   }
 }
+
+
+
+
+/*-----------------------------------*\
+  #FAQ
+\*-----------------------------------*/
+
+.faq .container {
+  display: grid;
+  gap: 20px;
+}
+
+.faq .title-wrapper {
+  background-color: var(--white);
+  padding: 30px 25px;
+  box-shadow: var(--shadow-1);
+}
+
+
+
+.faq-card {
+  background-color: var(--);
+  border-radius: var(--radius-5);
+  overflow: hidden;
+}
+
+.faq-card .card-action {
+  --action-bg: var(--bg-black);
+  --color: var(--white);
+
+  background-color: var(--action-bg);
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  gap: 20px;
+  transition: var(--transition-1);
+}
+
+.faq-card .card-action:is(:hover, :focus, .active) {
+  --action-bg: var(--kappel);
+  --color: var(--bg-white);
+}
+
+.faq-card .card-title {
+  color: var(--color);
+  font-size: var(--fs-8);
+  transition: var(--transition-1);
+}
+
+.faq-card ion-icon {
+  color: var(--color);
+  font-size: 15px;
+  transition: var(--transition-1);
+  --ionicon-stroke-width: 60px;
+}
+
+.faq-card .card-action.active .open,
+.faq-card .card-action .close { display: none; }
+
+.faq-card .card-action .open,
+.faq-card .card-action.active .close { display: block; }
+
+.faq-card .card-content {
+  font-size: var(--fs-10);
+  padding-inline: 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition-2);
+  border-style: solid; /* Assurez-vous que le style de bordure est défini comme "solid" */
+  border-color: var(--kappel); /* Couleur de la bordure */
+  border-width: 0 1px 1px 1px; /* Largeur de la bordure (haut, droite, bas, gauche) */
+  border-radius: 0 0 var(--radius-5) var(--radius-5); /* Arrondi uniquement des coins inférieurs */
+}
+
+
+.faq-card .card-content p { 
+  margin-block: 15px;
+  color: var(--quick-silver);
+ }
+
+.faq-card .card-action.active + .card-content { max-height: 500px; }
+
 

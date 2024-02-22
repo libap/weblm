@@ -71,3 +71,14 @@ const activeElem = function () {
 }
 
 addEventOnElem(window, "scroll", activeElem);
+
+
+/**
+ * accordion toggle
+ */
+
+const accordionAction = document.querySelectorAll("[data-accordion-action]");
+
+const toggleAccordion = function () { this.classList.toggle("active"); }
+
+addEventOnElem(accordionAction, "click", toggleAccordion);
