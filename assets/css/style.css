@@ -38,6 +38,10 @@
   --kappel: hsl(170, 75%, 41%);
   --white: hsl(0, 0%, 100%);
 
+  --bg-white: hsla(0, 0%, 100%, 1);
+
+  --bg-black: hsla(0, 0%, 0%, 1);
+
   /**
    * gradient color
    */
@@ -1427,3 +1431,54 @@ body {
   gap: 40px;
 
 }
+
+
+
+/*-----------------------------------*\
+  #PRELOADER
+\*-----------------------------------*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  box-shadow: inset 55vw 0 0 0 var(--bg-black),
+              inset -55vw 0 0 0 var(--bg-black);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.preloader.loaded {
+  transition: 300ms ease 500ms;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 0 var(--bg-white),
+              inset 0 0 0 0 var(--bg-white);
+}
+
+.preloader .line {
+  width: 1px;
+  height: 100%;
+  background-color: var(--bg-white);
+  transition: var(--transition-2);
+  animation: loading 1000ms linear forwards;
+}
+
+@keyframes loading {
+  0% { transform: scaleY(0); }
+  100% { transform: scaleY(0.3); }
+}
+
+.preloader.loaded .line { animation: loaded 500ms ease forwards; }
+
+@keyframes loaded {
+  0% { transform: scaleY(0.3); }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+
