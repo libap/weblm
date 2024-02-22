@@ -503,6 +503,8 @@ body {
   padding: 50px 30px;
   text-align: center;
   border-radius: var(--radius-5);
+  display: flex;
+  flex-direction: column;
 }
 
 .category-card .card-icon {
@@ -531,6 +533,22 @@ body {
   max-width: max-content;
   margin-inline: auto;
   border-radius: var(--radius-5);
+}
+
+.UlChiffres{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.UlChiffres li{
+  flex: 1 0 51%;
+}
+
+@media (max-width: 1000px) {
+  .UlsavoirFaire li{
+    flex: 1 0 100%;
+  }
 }
 
 
@@ -1451,6 +1469,8 @@ body {
   }
 }
 
+
+
 /*-----------------------------------*\
   #FEATURES
 \*-----------------------------------*/
@@ -1631,18 +1651,24 @@ body {
 
 .social-list {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center; /* Aligner horizontalement au centre */
   list-style: none;
-  padding-top: 30px;
+  padding-top: 50px;
+  gap: 20px;
 }
 
 .social-link {
   display: flex;
   align-items: center; /* Aligner verticalement au centre */
   margin: 0 10px; /* Marge entre les icônes */
-  font-size: var(--fs-1); /* Taille des icônes */
   animation: bounce 2.5s infinite;
+}
 
+.social-link ion-icon {
+  margin-right: 10px; /* Marge à droite des icônes pour l'espace */
+  font-size: var(--fs-1); /* Taille des icônes */
 }
 
 
