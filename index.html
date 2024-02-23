@@ -742,9 +742,25 @@
 
           <h2 class="h2 section-title">Nos différentes offres selon vos besoins</h2>
 
-          <ul class="grid-list">
+          <div class="container-toggle">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="switch">
+                  <input id="switch-y" name="tripple" type="radio" value="Y" class="switch-input" checked />
+                  <label for="switch-y" class="switch-label switch-label-y" data-price="price1">Standard</label>
+                  <input id="switch-i" name="tripple" type="radio" value="I" class="switch-input" />
+                  <label for="switch-i" class="switch-label switch-label-i" data-price="price2">Populaire</label>
+                  <input id="switch-n" name="tripple" type="radio" value="N" class="switch-input" />
+                  <label for="switch-n" class="switch-label switch-label-n" data-price="price3">Premium</label>
+                  <span class="switch-selector"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <li>
+          <ul class="UlPrice">
+
+            <li class="offre active-price" data-price="price1">
               <div class="blog-card">
 
                 <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
@@ -758,7 +774,7 @@
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
 
-                  <a href="#" class="card-subtitle">Offre Standard 499.99€</a>
+                  <a href="#" class="card-subtitle">Offre <strong>Standard</strong> 499.99€</a>
 
                   <h3 class="h3">
                     <a href="#" class="card-title">Site vitrine 1 page</a>
@@ -801,7 +817,7 @@
               </div>
             </li>
 
-            <li>
+            <li class="offre hidden-price" data-price="price2">
               <div class="blog-card">
 
                 <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
@@ -858,7 +874,7 @@
               </div>
             </li>
 
-            <li>
+            <li class="offre hidden-price" data-price="price3">
               <div class="blog-card">
 
                 <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
@@ -872,7 +888,7 @@
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
 
-                  <a href="#" class="card-subtitle">Offre PREMIUM 1499.99€</a>
+                  <a href="#" class="card-subtitle">Offre <strong>Premimum</strong> 1499.99€</a>
 
                   <h3 class="h3">
                     <a href="#" class="card-title">Site vitrine 3 à 5 pages</a>

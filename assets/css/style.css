@@ -1709,3 +1709,114 @@ body {
   @media (max-width: 1200px) {
     .cursor { display: none; }
   }
+
+
+
+  /*-----------------------------------*\
+  #TOGGLE TARIFS
+\*-----------------------------------*/
+
+.UlPrice{
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.UlPrice li{
+  flex: 1 0 33%;
+}
+
+.container-toggle {
+  display: none;
+
+}
+
+
+@media (max-width: 1000px) {
+
+.UlPrice li{
+  width: 40%;
+}
+
+.container-toggle {
+  display: block;
+  margin: 30px auto 0;
+  color: white;
+  padding: 10px;
+  width: 400px;
+  background-color: rgba(255,255,255,1);
+}
+
+.switch {
+  position: relative;
+  height: 32px;
+  width: 300px;
+  margin: 20px auto;
+  background: #F2F2F2;
+  background: #D7D7D7;
+  border-radius: 32px;
+}
+.switch-label {
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100px;
+  line-height: 32px;
+  font-size: 12px;
+  color: #676a6c;
+  text-align: center;
+  cursor: pointer;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-input:checked + .switch-label {
+  color: #FFF;
+  transition: 0.15s ease-out;
+  transition-property: color, text-shadow;
+}
+
+.switch-input:checked + .switch-label-y ~ .switch-selector {
+  transform: translateX(0%);
+  background-color: #1AB394;
+}
+.switch-input:checked + .switch-label-i ~ .switch-selector {
+  transform: translateX(100%);
+  background-color: #f8ac59;
+}
+.switch-input:checked + .switch-label-n ~ .switch-selector {
+  transform: translateX(200%);
+  background-color: #ed5565;
+}
+
+
+.switch-selector {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 100px;
+  height: 32px;
+  border-radius: 32px;
+  background-color: #1ab394;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+
+  .active-price{
+    display: block;
+    transition: var(--transition-2);
+  }
+  
+  .hidden-price{
+    display: none;
+    transition: var(--transition-2);
+  }
+}
+

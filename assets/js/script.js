@@ -131,3 +131,42 @@ document.body.addEventListener("mouseout", function () {
 document.body.addEventListener("mouseover", function () {
   cursor.classList.remove("disabled");
 });
+
+
+
+
+/**
+ * TOGGLE PRICE
+ */
+
+// Sélectionnez tous les éléments ayant la classe switch-label
+const labels = document.querySelectorAll('.switch-label');
+// Sélectionnez tous les éléments li ayant la classe offre
+const offres = document.querySelectorAll('li.offre');
+
+// Ajoutez un gestionnaire d'événements de clic à chaque label
+labels.forEach(label => {
+  label.addEventListener('click', () => {
+    // Récupérez la valeur de l'attribut data-price du label cliqué
+    const priceClicked = label.getAttribute('data-price');
+
+    // Parcourez chaque élément li avec la classe offre
+    offres.forEach(offre => {
+      // Récupérez la valeur de l'attribut data-price de l'élément li
+      const priceLi = offre.getAttribute('data-price');
+
+      // Vérifiez si l'attribut data-price de l'élément li est différent de celui du label cliqué
+      if (priceLi !== priceClicked) {
+        // Ajoutez la classe hidden à l'élément li
+        offre.classList.add('hidden-price');
+        // Supprimez la classe active-price de l'élément li
+        offre.classList.remove('active-price');
+      } else {
+        // Sinon, retirez la classe hidden de l'élément li
+        offre.classList.remove('hidden-price');
+        // Ajoutez la classe active-price à l'élément li
+        offre.classList.add('active-price');
+      }
+    });
+  });
+});
