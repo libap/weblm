@@ -622,8 +622,19 @@ body {
 
 
 /*-----------------------------------*\
-  #COURSE
+  #PORTFOLIO ET AVIS
 \*-----------------------------------*/
+
+.ulPortfolio {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  gap: 20px;
+  white-space: nowrap; /* Empêche le retour à la ligne des éléments */
+}
+
+.ulPortfolio li{
+  width: 500px;
+}
 
 .course { background-color: var(--isabelline); }
 
@@ -663,7 +674,10 @@ body {
   --ionicon-stroke-width: 50px;
 }
 
-.course-card .card-content { padding: 25px; }
+.course-card .card-content { 
+  padding: 25px;
+  word-wrap: break-word; /* Ajout pour permettre le passage à la ligne */
+ }
 
 .course-card .badge {
   background-color: var(--kappel_15);
@@ -674,12 +688,14 @@ body {
 }
 
 .course-card .card-title {
+
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  overflow: hidden;
   margin-block: 15px 8px;
   transition: var(--transition-1);
+  word-wrap: break-word; /* Ajout pour forcer le passage à la ligne */
+
 }
 
 .course-card .card-title:is(:hover, :focus) { color: var(--kappel); }
@@ -1820,3 +1836,57 @@ body {
   }
 }
 
+
+  /*-----------------------------------*\
+  #CAROUSEL PORTFOLIO
+\*-----------------------------------*/
+
+
+.carousel-control-next {
+    justify-content: flex-end
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    transition: none;
+    opacity: unset;
+}
+
+
+  /*-----------------------------------*\
+  #SWIPER
+\*-----------------------------------*/
+
+swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+swiper-slide .swiper-slide-visible .swiper-slide-next{
+  color: red;
+  background-color: red;
+}
+
+.badge-portfolio {
+  position: absolute;
+  background-color: var(--kappel_15);
+  max-width: max-content;
+  color: var(--kappel);
+  line-height: 25px;
+  padding-inline: 10px;
+  margin: 20px 20px;
+
+}
