@@ -280,98 +280,6 @@
       </section>
 
 
-      <!-- 
-        - #POURQUOI faire un site vitrine
-      -->
-
-      <section class="section category" aria-label="category">
-        <div class="container">
-
-          <p class="section-subtitle">-QUELQUES CHIFFRES-</p>
-
-          <h2 class="h2 section-title">
-            Pourquoi créer <span class="span"> votre site </span> ?
-          </h2>
-
-          <p class="section-text">
-          </p>
-          <p class="section-text">
-
-          </p>
-
-          <ul class="UlChiffres">
-
-            <li>
-              <div class="category-card" style="--color: 170, 75%, 41%">
-
-                <div class="card-icon">
-                  <img src="./assets/images/category-1.svg" width="40" height="40" loading="lazy"
-                    alt="Online Degree Programs" class="img">
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title"><strong>75%</strong> </a>
-                </h3>
-
-                <p class="card-text">
-                  Environ 75% des utilisateurs jugent la crédibilité d'une entreprise basée sur la conception de son
-                  site web.
-                </p>
-
-                <span class="card-badge"></span>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 351, 83%, 61%">
-
-                <div class="card-icon">
-                  <img src="./assets/images/category-2.svg" width="40" height="40" loading="lazy"
-                    alt="Non-Degree Programs" class="img">
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title"><strong>80%</strong> </a>
-                </h3>
-
-                <p class="card-text">
-                  Environ 80% des consommateurs effectuent des recherches en ligne avant de
-                  contacter une entreprise.
-                </p>
-
-                <span class="card-badge"></span>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 229, 75%, 58%">
-
-                <div class="card-icon">
-                  <img src="./assets/images/category-3.svg" width="40" height="40" loading="lazy"
-                    alt="Off-Campus Programs" class="img">
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title"><strong>90%</strong> </a>
-                </h3>
-
-                <p class="card-text">
-                  Environ 90% des internautes utilisent leur smartphone pour naviguer sur le web.
-                </p>
-
-                <span class="card-badge"></span>
-
-              </div>
-            </li>
-
-
-
-          </ul>
-
-        </div>
-      </section>
 
       <!-- 
         - #VIDEO
@@ -438,11 +346,13 @@
                     Lorem ipsum dolor sit amet, consectetur adi piscing semper turpis. Nullam eget luctlie gula and
                     adipiscing elit.
                   </p>
+                  <p class="card-text">
+                    Environ 80% des consommateurs effectuent des recherches en ligne avant de contacter une entreprise.
+                  </p>
 
                   <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+
                   </a>
 
                 </div>
@@ -468,9 +378,8 @@
                   </p>
 
                   <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+
                   </a>
 
                 </div>
@@ -494,11 +403,14 @@
                     Lorem ipsum dolor sit amet, consectetur adi piscing semper turpis. Nullam eget luctlie gula and
                     adipiscing elit.
                   </p>
+                  <p class="card-text">
+                    Environ 75% des utilisateurs jugent la crédibilité d'une entreprise basée sur la conception de son
+                    site web.
+                  </p>
 
                   <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+
                   </a>
 
                 </div>
@@ -522,11 +434,13 @@
                     Lorem ipsum dolor sit amet, consectetur adi piscing semper turpis. Nullam eget luctlie gula and
                     adipiscing elit.
                   </p>
+                  <p class="card-text">
+                    Environ 90% des internautes utilisent leur smartphone pour naviguer sur le web.
+                  </p>
 
                   <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+
                   </a>
 
                 </div>
@@ -567,6 +481,12 @@
 
                 <h3 class="h3 card-title">Free Icon Plugin</h3>
 
+                <p class="card-text">
+                  Nullam ullamcorper condimentum urna eu accumsan.
+                </p>
+                <p class="card-text">
+                  Nullam ullamcorper condimentum urna eu accumsan.
+                </p>
                 <p class="card-text">
                   Nullam ullamcorper condimentum urna eu accumsan.
                 </p>
@@ -670,32 +590,31 @@
           <h2 class="h2 section-title">Nos réalisations</h2>
 
 
-            <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-            slides-per-view="auto" coverflow-effect-rotate="140" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" rewind="true" autoplay-delay="1500" autoplay-disable-on-interaction="false">
-            <swiper-slide>
-              
+          <swiper-container id="swiperPortfolio" class="mySwiper swiperPortfolio" pagination="true" effect="coverflow"
+            grab-cursor="true" centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="140"
+            coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1"
+            coverflow-effect-slide-shadows="false" rewind="true" autoplay-delay="1500"
+            autoplay-disable-on-interaction="false">
+
+            <swiper-slide class="slidePortfolio">
               <div class="container-portfolio">
                 <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                 <span class="badge-portfolio">Restaurant</span>
               </div>
-
-
             </swiper-slide>
-            <swiper-slide>
 
+            <swiper-slide class="slidePortfolio">
               <div class="container-portfolio">
                 <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
                 <span class="badge-portfolio">Restaurant</span>
               </div>
             </swiper-slide>
-            <swiper-slide>
+
+            <swiper-slide class="slidePortfolio">
               <div class="container-portfolio">
                 <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                 <span class="badge-portfolio">Restaurant</span>
               </div>
-
-
             </swiper-slide>
 
           </swiper-container>
@@ -712,167 +631,21 @@
 
 
       <!-- 
-        - #AVIS ET REALISATIONS
+        - #AVIS 
       -->
 
       <section class="section course" id="courses" aria-label="course">
 
         <div class="container">
 
+
+
           <p class="section-subtitle">-Portfolio-</p>
 
           <h2 class="h2 section-title">Nos réalisations</h2>
 
+       
 
-
-
-
-          <ul class="ulPortfolio">
-
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-1.jpg" width="370" height="220" loading="lazy"
-                    alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
-                </figure>
-                <!-- 
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">Restauration</span>
-                </div>-->
-
-                <div class="card-content">
-
-                  <span class="badge">Restaurant</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Site réalisé pour un sssssssssssssssssssssssssssssssssssnack de
-                      restauration rapide.</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">Louis Lagabbe</p>
-
-                  </div>
-
-                  <ul class="card-meta-list">
-
-
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-1.jpg" width="370" height="220" loading="lazy"
-                    alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
-                </figure>
-                <!-- 
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">Restauration</span>
-                </div>-->
-
-                <div class="card-content">
-
-                  <span class="badge">Restaurant</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Site réaliséssssssssssssssssssssssssssssss pour un snack de
-                      restauration rapide.</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">Louis Lagabbe</p>
-
-                  </div>
-
-                  <ul class="card-meta-list">
-
-
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-1.jpg" width="370" height="220" loading="lazy"
-                    alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
-                </figure>
-                <!-- 
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">Restauration</span>
-                </div>-->
-
-                <div class="card-content">
-
-                  <span class="badge">Restaurant</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Site réalisé pour un snack de restauration rapide.</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">Louis Lagabbe</p>
-
-                  </div>
-
-                  <ul class="card-meta-list">
-
-
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
-
-
-
-          </ul>
 
 
 
