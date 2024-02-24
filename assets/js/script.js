@@ -1,6 +1,11 @@
 'use strict';
 
 /**
+ * AOS ANIMATION
+ */
+
+AOS.init();
+/**
  * PRELOADER
  */
 
@@ -80,6 +85,52 @@ const activeElem = function () {
 }
 
 addEventOnElem(window, "scroll", activeElem);
+
+
+/**
+ * HIDE NAVBAR ON SCROLL
+ */
+
+let lastScrollPos = 0;
+
+window.addEventListener("scroll", function () {
+
+  const isScrollDown = lastScrollPos < window.scrollY;
+  if (isScrollDown) {
+    //console.log("Scroll Down");
+    header.classList.add("hideHeader");
+  } else {
+    //console.log("Scroll Up");
+    header.classList.remove("hideHeader");
+  }
+  lastScrollPos = window.scrollY;
+});
+
+
+/**
+ * ANIMATION ON SCROLL
+ */
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    // Vérifier si l'élément est dans la vue actuelle de l'utilisateur
+    if (elementTop < windowHeight - elementVisible && elementTop >= 0) {
+      reveals[i].classList.add("activeAnimation");
+    } else {
+      reveals[i].classList.remove("activeAnimation");
+    }
+  }
+}
+
+// Appeler la fonction reveal lorsque l'utilisateur fait défiler la page
+window.addEventListener("scroll", reveal);
+
+
 
 
 /**
@@ -175,3 +226,4 @@ labels.forEach(label => {
 /**
  * CARROUSEL PORTFOLIO
  */
+

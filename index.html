@@ -16,7 +16,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./logobleublanc.png">
 
   <!-- 
     - custom css link
@@ -31,6 +31,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
     rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- 
     - preload images
@@ -57,14 +58,14 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
+        <span class="lettersWEB">WEB</span><span class="lettersLM">LM</span>
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="wrapper">
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
+            <span class="lettersWEB">WEB</span><span class="lettersLM">LM</span>
           </a>
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -317,7 +318,7 @@
         - #SAVOIR FAIRE
       -->
 
-      <section class="section service" id="services" aria-label="service">
+      <section class="section service " id="services" aria-label="service" data-aos="fade-up" data-aos-once="false">
         <div class="container">
 
           <p class="section-subtitle text-center">-NOTRE SPECIALISATION-</p>
@@ -461,7 +462,7 @@
         - #FEATURES OU  #PROCESSUS NOTRE SERVICE ETAPE PAR ETAPE
       -->
 
-      <section class="section features" id="features" aria-label="features">
+      <section class="section features " id="features" aria-label="features">
         <div class="container">
 
           <p class="section-subtitle text-center">-POURQUOI NOUS CHOISIR-</p>
@@ -475,7 +476,7 @@
           <ul class="grid-list">
 
             <li>
-              <div class="features-card">
+              <div class="features-card reveal">
 
                 <data class="card-number" value="01">01</data>
 
@@ -495,7 +496,7 @@
             </li>
 
             <li>
-              <div class="features-card">
+              <div class="features-card reveal">
 
                 <data class="card-number" value="02">02</data>
 
@@ -509,7 +510,7 @@
             </li>
 
             <li>
-              <div class="features-card">
+              <div class="features-card reveal">
 
                 <data class="card-number" value="03">03</data>
 
@@ -523,11 +524,11 @@
             </li>
 
             <li>
-              <div class="features-card">
+              <div class="features-card reveal">
 
                 <data class="card-number" value="04">04</data>
 
-                <h3 class="h3 card-title">Best Premimum Image</h3>
+                <h3 class="h3 card-title">Best Premium Image</h3>
 
                 <p class="card-text">
                   Nullam ullamcorper condimentum urna eu accumsan.
@@ -537,7 +538,7 @@
             </li>
 
             <li>
-              <div class="features-card">
+              <div class="features-card reveal">
 
                 <data class="card-number" value="05">05</data>
 
@@ -551,7 +552,7 @@
             </li>
 
             <li>
-              <div class="features-card">
+              <div class="features-card reveal">
 
                 <data class="card-number" value="06">06</data>
 
@@ -644,7 +645,7 @@
 
           <h2 class="h2 section-title">Nos réalisations</h2>
 
-       
+
 
 
 
@@ -817,7 +818,7 @@
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
 
-                  <a href="#" class="card-subtitle">Offre <strong>Premimum</strong> 1499.99€</a>
+                  <a href="#" class="card-subtitle">Offre <strong>Premium</strong> 1499.99€</a>
 
                   <h3 class="h3">
                     <a href="#" class="card-title">Site vitrine 3 à 5 pages</a>
@@ -1176,6 +1177,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 

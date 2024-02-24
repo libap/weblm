@@ -28,14 +28,14 @@
   --light-gray: hsl(0, 0%, 80%);
   --isabelline: hsl(36, 33%, 94%);
   --gray-x-11: hsl(0, 0%, 73%);
-  --kappel_15: hsla(170, 75%, 41%, 0.15);
+  --kappel_15: #000000;
   --platinum: hsl(0, 0%, 90%);
   --gray-web: hsl(0, 0%, 50%);
   --black_80: hsla(0, 0%, 0%, 0.8);
   --white_50: hsla(0, 0%, 100%, 0.5);
   --black_50: hsla(0, 0%, 0%, 0.5);
   --black_30: hsla(0, 0%, 0%, 0.3);
-  --kappel: hsl(170, 75%, 41%);
+  --kappel: #008EF2;
   --white: hsl(0, 0%, 100%);
   --cultured: hsl(0, 0%, 93%);
   --bg-white: hsla(0, 0%, 100%, 1);
@@ -176,9 +176,10 @@ body {
 
 ::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
 
-::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+::-webkit-scrollbar-thumb { background-color: var(--kappel); width: 8px; }
 
-::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+::-webkit-scrollbar-thumb:hover { background-color: var(--kappel); }
+
 
 
 
@@ -230,7 +231,7 @@ body {
 
 .section-title .span {
   display: inline-block;
-  color: var(--color);
+  color: var(--kappel);
 }
 
 .btn {
@@ -607,7 +608,7 @@ body {
 }
 
 .about-item ion-icon {
-  color: var(--selective-yellow);
+  color: var(--kappel);
   font-size: 20px;
   --ionicon-stroke-width: 50px;
 }
@@ -1687,6 +1688,7 @@ body {
 .social-link ion-icon {
   margin-right: 10px; /* Marge à droite des icônes pour l'espace */
   font-size: var(--fs-1); /* Taille des icônes */
+  color: var(--kappel)
 }
 
 
@@ -1798,15 +1800,15 @@ body {
 
 .switch-input:checked + .switch-label-y ~ .switch-selector {
   transform: translateX(0%);
-  background-color: #1AB394;
+  background-color: var(--kappel);
 }
 .switch-input:checked + .switch-label-i ~ .switch-selector {
   transform: translateX(100%);
-  background-color: #f8ac59;
+  background-color: var(--kappel);
 }
 .switch-input:checked + .switch-label-n ~ .switch-selector {
   transform: translateX(200%);
-  background-color: #ed5565;
+  background-color: var(--kappel);
 }
 
 
@@ -1866,25 +1868,29 @@ body {
 .course swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
 }
 
 .course swiper-slide img {
   display: block;
   width: 100%;
+  border-radius: var(--radius-10);
 }
 
 
 
 .badge-portfolio {
+
   position: absolute;
   background-color: var(--kappel_15);
   max-width: max-content;
-  color: var(--kappel);
-  line-height: 25px;
-  padding-inline: 10px;
+  background-color: var(--kappel);
+  color: var(--white);
+  line-height: 30px;
+  padding-inline: 30px;
   margin: 20px 20px;
+  border-radius: var(--radius-10);
 
 }
 
@@ -1898,3 +1904,65 @@ body {
   }
 }
 
+
+  /*-----------------------------------*\
+    #HIDE HEADER
+\*-----------------------------------*/
+
+  .hideHeader{
+    display: none;
+    transition: var(--transition-2);
+  }
+
+
+  /*-----------------------------------*\
+    #LOGO
+\*-----------------------------------*/
+
+.logo {
+  font-size: var(--fs-1); /* Taille de la police */
+  font-style: italic;
+  font-weight: bold; /* Gras */
+  text-decoration: none; /* Pas de soulignement */
+  color: black; /* Couleur de texte par défaut */
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+
+  .logo {
+    font-size: var(--fs-2); /* Taille de la police */
+
+  }
+}
+
+
+.logo .lettersWEB {
+  color: var(--bg-black); /* Couleur noire pour les deux dernières lettres */
+}
+.logo .lettersLM {
+  color: var(--kappel); /* Couleur bleue pour les trois premières lettres */
+}
+
+strong {
+  color: var(--kappel);
+}
+
+
+  /*-----------------------------------*\
+    #ANIMATION
+\*-----------------------------------*/
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: opacity 2s ease; /* Transition d'affichage plus rapide */
+}
+
+.reveal.activeAnimation {
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.8s ease; /* Transition de désaffichage plus lente */
+
+}
