@@ -1873,8 +1873,9 @@ swiper-slide img {
   width: 100%;
 }
 
-.swiper-slide-visible .swiper-slide-prev{
-  transform: scale(0.8) translateX(-100px);
+swiper-slide .swiper-slide-visible .swiper-slide-next{
+  color: red;
+  background-color: red;
 }
 
 .badge-portfolio {
@@ -1889,9 +1890,6 @@ swiper-slide img {
 }
 
 @media (max-width: 1000px) {
-  .swiper-slide-active{
-    height: 1200px !important;
-  }
 
   swiper-slide {
     background-position: center;
