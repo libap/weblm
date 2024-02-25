@@ -77,7 +77,7 @@ const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 const activeElem = function () {
   if (window.scrollY > 100) {
-    console.log(window.scrollY)
+    //console.log(window.scrollY)
     header.classList.add("active");
     backTopBtn.classList.add("active");
   } else {
