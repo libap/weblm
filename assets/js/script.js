@@ -71,11 +71,13 @@ addEventOnElem(navLinks, "click", closeNavbar);
  * header active when scroll down to 100px
  */
 
+
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 const activeElem = function () {
   if (window.scrollY > 100) {
+    console.log(window.scrollY)
     header.classList.add("active");
     backTopBtn.classList.add("active");
   } else {
@@ -94,17 +96,20 @@ addEventOnElem(window, "scroll", activeElem);
 let lastScrollPos = 0;
 
 window.addEventListener("scroll", function () {
-
-  const isScrollDown = lastScrollPos < window.scrollY;
-  if (isScrollDown) {
-    //console.log("Scroll Down");
-    header.classList.add("hideHeader");
-  } else {
-    //console.log("Scroll Up");
-    header.classList.remove("hideHeader");
+  if (window.scrollY > 500) {
+    const isScrollDown = lastScrollPos < window.scrollY;
+    if (isScrollDown) {
+      //console.log("Scroll Down");
+      header.classList.add("hideHeader");
+    } else {
+      //console.log("Scroll Up");
+      header.classList.remove("hideHeader");
+    }
+    lastScrollPos = window.scrollY;
   }
-  lastScrollPos = window.scrollY;
 });
+
+
 
 
 /**
