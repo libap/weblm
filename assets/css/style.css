@@ -1920,7 +1920,7 @@ body {
 \*-----------------------------------*/
 
 .logo {
-  font-size: var(--fs-1); /* Taille de la police */
+  font-size: var(--fs-2); /* Taille de la police */
   font-style: italic;
   font-weight: bold; /* Gras */
   text-decoration: none; /* Pas de soulignement */
@@ -1964,4 +1964,14 @@ strong {
   transform: translateY(0);
   opacity: 1;
   
+}
+
+
+  /*-----------------------------------*\
+    #LANDING FLUIDE ANIMATION
+\*-----------------------------------*/
+#landing{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-black);
 }
