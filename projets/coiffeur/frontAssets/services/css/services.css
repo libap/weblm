@@ -1,0 +1,697 @@
+@font-face {
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+    src: url(//rainbowit.net/themes/inbio/wp-content/themes/inbio/assets/fonts/slick.eot);
+    src: url(//rainbowit.net/themes/inbio/wp-content/themes/inbio/assets/fonts/slick.eot?#iefix) format('embedded-opentype'), url(//rainbowit.net/themes/inbio/wp-content/themes/inbio/assets/fonts/slick.woff) format('woff'), url(//rainbowit.net/themes/inbio/wp-content/themes/inbio/assets/fonts/slick.ttf) format('truetype'), url(//rainbowit.net/themes/inbio/wp-content/themes/inbio/assets/fonts/slick.svg#slick) format('svg');
+}
+
+:root {
+    /* color property  */
+    --sa-blue: #007bff;
+    --sa-indigo: #6610f2;
+    --sa-purple: #6f42c1;
+    --sa-pink: #e83e8c;
+    --sa-red: #dc3545;
+    --sa-orange: #fd7e14;
+    --sa-yellow: #ffc107;
+    --sa-green: #28a745;
+    --sa-teal: #20c997;
+    --sa-cyan: #17a2b8;
+    --sa-white: #fff;
+    --sa-gray: #6c757d;
+    --sa-gray-dark: #343a40;
+    --sa-primary: #007bff;
+    --sa-secondary: #6c757d;
+    --sa-success: #28a745;
+    --sa-info: #17a2b8;
+    --sa-warning: #ffc107;
+    --sa-danger: #dc3545;
+    --sa-light: #f8f9fa;
+    --sa-dark: #343a40;
+    --sa-black: #000000;
+    --sa-black2: #222;
+
+    /* theme */
+    --sa-bg1: var(--sa-black);
+    --sa-bg2: #141414;
+    --sa-text1: var(--sa-white);
+    --sa-brand1: #ff8442;
+    --sa-brand2: #b46c4c;
+    --sa-brand3: rgba(180, 107, 76, 0.527);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--sa-font-family-sans-serif);
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+select,
+textarea {
+    border: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+input:active,
+textarea:active,
+select:active {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.7rem;
+    color: var(--sa-text-body);
+}
+
+hr {
+    color: var(--sa-black);
+}
+
+/* some need  */
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.dnone {
+    display: none;
+}
+
+.dblock {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* some need  */
+
+html {
+    font-size: 62.5%;
+    /* overflow: hidden; */
+}
+
+body {
+    background-color: var(--sa-bg2);
+    color: var(--sa-text1);
+    font-family: "Staatliches", sans-serif;
+}
+
+#menubar {
+    display: none;
+}
+
+.heading .head .fst {
+    margin-right: 20rem;
+}
+
+.heading .head h6 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1rem;
+    white-space: nowrap;
+    color: var(--sa-brand1);
+    margin-bottom: 2rem;
+}
+
+.heading .head h2 {
+    font-size: 3.5rem;
+    white-space: nowrap;
+}
+
+.header {
+    background-color: var(--sa-bg1);
+    padding: 1rem 2%;
+    align-items: center;
+    text-align: center;
+}
+
+.header .logo {
+    width: 4rem;
+}
+
+.header .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header .navbar ul li {
+    margin: 0 .5rem;
+    padding: .5rem;
+    transition: .3s;
+}
+
+.header .navbar ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: .3s;
+}
+
+.header .navbar ul li.active {
+    border-bottom: 2px solid var(--sa-brand1);
+}
+
+.header .navbar ul li.active:hover {
+    border: none !important;
+    border-bottom: 2px solid var(--sa-brand1) !important;
+}
+
+.header .navbar ul li.active:hover a {
+    color: var(--sa-brand1);
+}
+
+.header .navbar ul li:hover {
+    border: 2px solid var(--sa-brand2);
+}
+
+.header .navbar ul li:hover a {
+    color: var(--sa-brand1);
+}
+
+.header .navbar .box {
+    display: none;
+}
+
+.header .conbar .box a {
+    color: var(--sa-white);
+    border: .5px solid var(--sa-brand2);
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: .5s;
+}
+
+.header .conbar .box a:hover {
+    background-color: var(--sa-brand1);
+}
+
+.header .conbar .box a i {
+    color: var(--sa-brand2);
+    padding-right: .5rem;
+    transition: .3s;
+}
+
+.header .conbar .box a:hover i {
+    color: var(--sa-white);
+}
+
+.hero-section {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 7rem;
+}
+
+.section {
+    padding: 10rem 0;
+}
+
+.packages {
+    background-color: var(--sa-white);
+    color: var(--sa-black);
+    padding-bottom: 1px;
+}
+
+.main h2 {
+    background-color: var(--sa-black);
+    color: var(--sa-white);
+    font-size: 4rem;
+    padding: 1.5rem;
+    border-left: 3px solid var(--sa-brand1);
+}
+
+.packages .content {
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+}
+
+.packages .content .gap {
+    gap: 3rem;
+}
+
+.packages .content .box .flex {
+    gap: 1rem;
+}
+
+.packages .content .box {
+    width: 100%;
+}
+
+.packages .content .box h6 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.packages .content .box p {
+    font-size: 1.5rem;
+    color: var(--sa-brand1);
+    font-weight: 600;
+}
+
+.packages .content .box p small {
+    color: #4e4c4c;
+    margin-right: .5rem;
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+}
+
+.packages .content .box span {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #4e4c4c;
+}
+
+.packages .content ul{
+    margin-top: 1.5rem;
+}
+
+.packages .content ul li {
+    font-size: 1.4rem;
+    color: var(--sa-black2);
+    margin-bottom: .5rem;
+}
+
+.packages .servicebar {
+    gap: .3rem;
+}
+
+.packages .servicebar a {
+    background-color: var(--sa-brand1);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1.5rem 0;
+    text-align: center;
+    transition: .5s;
+}
+
+.packages .servicebar a:hover {
+    background-color: var(--sa-brand2);
+}
+
+.services {
+    background-color: var(--sa-white);
+}
+
+.services.servicescolor1 {
+    background-color: rgb(250, 245, 234);
+}
+
+.services.servicescolor2 {
+    background-color: var(--sa-white);
+}
+
+.services.servicescolor3 {
+    background-color: rgb(250, 245, 234);
+}
+
+.services.servicescolor4 {
+    background-color: var(--sa-white);
+}
+
+.services .sparts {
+    gap: 2rem;
+}
+
+.services .sparts .img {
+    width: 40%;
+}
+
+.services .sparts .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.services .sparts .box {
+    width: 60%;
+    color: var(--sa-black);
+}
+
+.services .sparts .box .upcon .main {
+    margin-bottom: 4rem;
+}
+
+.services .sparts .box .upcon p {
+    color: rgb(109, 103, 103);
+    margin-bottom: 2rem;
+}
+
+.services .sparts .box hr {
+    background-color: rgb(109, 103, 103);
+    width: 100%;
+    height: 1.5px;
+    margin: 3rem 0;
+}
+
+.linedesignparts {
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.linedesignparts .part {
+    width: 100%;
+}
+
+.linedesignparts .box {
+    width: 100% !important;
+    padding: 1rem 0;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: .3s;
+}
+
+.linedesignparts .box .flex {
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.linedesignparts .box h4 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.linedesignparts .box span {
+    content: "";
+    background-color: rgb(109, 103, 103);
+    height: 2px;
+    width: 100%;
+    transition: .3s;
+}
+
+.linedesignparts .box .price {
+    color: var(--sa-brand1);
+    font-weight: 600;
+}
+
+.linedesignparts .box.deactive:hover {
+    color: var(--sa-brand1);
+    padding-left: 1rem;
+}
+
+.linedesignparts .box.deactive:hover h4 {
+    color: var(--sa-brand1);
+}
+
+.linedesignparts .box.deactive:hover span {
+    display: block;
+}
+
+.linedesignparts .box.deactive .description {
+    display: none;
+}
+
+.linedesignparts .box .description {
+    font-size: 1.3rem;
+    margin-right: 3rem;
+    display: block;
+}
+
+
+.contactform {
+    background: var(--sa-brand1);
+    background: linear-gradient(0deg, var(--sa-brand1) 50%, rgb(250, 245, 234) 50%);
+}
+
+.contactform .heading .head h2 {
+    color: var(--sa-black);
+}
+
+.contactform .heading .head p {
+    color: var(--sa-black);
+}
+
+.contactform .content {
+    margin-top: 7rem;
+    background-color: var(--sa-black);
+    padding: 10rem 7rem;
+}
+
+.contactform .content .form {
+    width: 50%;
+    background-color: #22222296;
+    padding: 3rem;
+}
+
+.contactform .content .form h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contactform .content .form .gap {
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contactform .content .form input {
+    width: 100%;
+    padding: 1.5rem;
+    color: var(--sa-white);
+}
+
+.contactform .content .form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    color: var(--sa-white);
+    height: 300px;
+}
+
+.contactform .content .form input,
+.contactform .content .form textarea {
+    background-color: var(--sa-black2);
+}
+
+.contactform .content .form input::placeholder,
+.contactform .content .form textarea::placeholder {
+    color: var(--sa-secondary);
+}
+
+.contactform .content .form button {
+    width: 100%;
+    background-color: var(--sa-brand1);
+    margin-top: 2rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contactform .content .form button:hover {
+    background-color: var(--sa-brand2);
+}
+
+.contactform .address {
+    width: 50%;
+    padding: 5rem;
+}
+
+.contactform .address h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contactform .address ul li {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contactform .address ul li i {
+    font-size: 2.5rem;
+    color: var(--sa-brand1);
+    margin-right: 1.3rem;
+}
+
+.contactform .address ul li span {
+    margin-left: 4rem;
+}
+
+.contactform .address .social {
+    margin-top: 5rem;
+}
+
+.contactform .address .social ul li {
+    margin: 1rem;
+}
+
+.contactform .address .social ul li a i {
+    color: var(--sa-white);
+    margin: 0;
+    transition: .3s;
+}
+
+.contactform .address .social ul li a {
+    height: 50px;
+    width: 50px;
+    background-color: var(--sa-black2);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.contactform .address .social ul li a:hover i {
+    color: var(--sa-brand1);
+}
+
+
+
+
+/* footer css start here */
+footer {
+    background-color: var(--sa-black);
+}
+
+footer .company {
+    background-color: #22222296;
+    width: 30%;
+    padding: 3rem;
+}
+
+footer .company p {
+    margin-top: 2rem;
+}
+
+footer .links {
+    width: 68%;
+    background-color: #22222296;
+    padding: 3rem;
+}
+
+footer .links ul li {
+    margin-bottom: 1.3rem;
+}
+
+footer .links ul li:first-child {
+    color: var(--sa-brand1);
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+footer .links ul li a {
+    font-size: 1.5rem;
+    color: var(--sa-white);
+    transition: .3s;
+}
+
+footer .links ul li a:hover {
+    color: var(--sa-brand1);
+    text-decoration: underline;
+}
+
+footer .low {
+    background-color: #22222296;
+    margin-top: 3rem;
+    padding: 3rem;
+}
+
+footer .low h2 {
+    font-size: 3rem;
+    color: var(--sa-brand1);
+    margin-bottom: 2rem;
+}
+
+footer .low ul li {
+    margin: 1rem;
+}
+
+footer .low ul li a {
+    color: var(--sa-white);
+    font-size: 2rem;
+    background-color: var(--sa-black2);
+    padding: 1.3rem;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+footer .low ul li a:hover {
+    color: var(--sa-brand1);
+    font-size: 2.1rem;
+}
+
+footer .brand {
+    margin-top: 2rem;
+}
+
+footer .brand p {
+    font-size: 1.3rem;
+}
+
+/* footer css end here  */

@@ -1,0 +1,268 @@
+@media (max-width: 560px) {
+
+    .header .conbar {
+        display: none;
+    }
+
+    #menubar {
+        display: block;
+        margin-right: 2rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .header .navbar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100%);
+        background-color: var(--sa-black);
+        padding: 10rem 5rem;
+        display: none;
+        transition: .5s;
+    }
+
+    .header .navbar ul {
+        display: block;
+        text-align: center;
+    }
+
+    .header .navbar ul li {
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .header .navbar .box{
+        display: block;
+        margin-top: 5rem;
+    }
+
+    .header .navbar .box a {
+        color: var(--sa-white);
+        border: .5px solid var(--sa-brand2);
+        padding: 1rem;
+        font-weight: 600;
+        font-size: 1.5rem;
+        transition: .5s;
+    }
+
+    .header .navbar .box a:hover {
+        background-color: var(--sa-brand1);
+    }
+    
+    .header .navbar .box a i {
+        color: var(--sa-brand2);
+        padding-right: .5rem;
+        transition: .3s;
+    }
+    
+    .header .navbar .box a:hover i {
+        color: var(--sa-white);
+    }
+
+    .header .navbar.active {
+        display: block;
+    }
+
+    .contact .flex {
+        display: block;
+    }
+
+    .contact .box:first-child{
+        border: none;
+        border-bottom: 1px solid var(--sa-secondary);
+    }
+
+    .contact .box:last-child {
+        border: none;
+        border-top: 1px solid var(--sa-secondary);
+    }
+
+    .heading .flex {
+        display: block;
+        text-align: center;
+    }
+
+    .heading .fst {
+        text-align: center;
+        padding-bottom: 2rem;
+        margin-right: 0 !important;
+    }
+
+    .heading .fst h6 {
+        font-size: 1rem;
+        letter-spacing: .5rem;
+    }
+
+    .heading .fst h2 {
+        font-size: 2rem;
+    }
+
+    .heading .head p {
+        font-size: 1rem;
+    }
+
+    .services .picture .flex {
+        display: block;
+    }
+
+    .services .picture img {
+        filter: none;
+    }
+
+    .picture .box .flex i {
+        opacity: 1;
+    }
+
+    .pricing .parts {
+        display: block;
+    }
+
+    .faq .chis {
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .faq .chis h4 {
+        margin-bottom: 1rem;
+    }
+
+    .about .content {
+        margin: 0;
+        padding: 5rem 2rem;
+    }
+
+    .about .heading .fst {
+        text-align: left;
+    }
+
+    .about .main-content .box {
+        padding-left: 1rem;
+    }
+
+    .about .main-content .box p {
+        text-align: left;
+    }
+
+    .portfolio .flex {
+        display: block;
+    }
+
+    .team .content .flex {
+        display: block;
+    }
+
+    .team .content .img-box{
+        margin-bottom: 2rem;
+    }
+
+    .contactform .content {
+        padding: 2rem 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .contactform .content .flex {
+        display: block;
+    }
+
+    .contactform .content .form {
+        width: 100%;
+    }
+
+    .contactform .address {
+        width: 100%;
+    }
+
+    .contactform .address h3 {
+        font-size: 2rem;
+    }
+
+    .contactform .address ul li {
+        font-size: 1.3rem;
+    }
+
+    .contactform .address ul li i {
+        font-size: 1.5rem;
+    }
+
+    .contactform .address .social ul {
+        display: flex;
+    }
+
+    .contactform .address .social ul li a {
+        height: 40px;
+        width: 40px;
+    }
+
+    .contactform .address .social h3 {
+        text-align: center;
+    }
+
+    .contactform .content .form input {
+        margin-bottom: 2rem;
+    }
+
+    .contactform .content .form .gap {
+        margin-bottom: 0;
+    }
+
+    .about .heading .head p {
+        display: none;
+    }
+
+    footer .flex {
+        display: block;
+    }
+
+    footer .company {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    footer .links {
+        width: 100%;
+    }
+
+    footer .links ul {
+        margin-bottom: 3rem;
+    }
+
+    footer .low h2 {
+        font-size: 2rem;
+    }
+
+    footer .low .flex {
+        display: flex;
+    }
+
+    .faq .content .box .description .flex {
+        display: block;
+    }
+
+    .faq .content .box .description img {
+        width: 100%;
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+    .heybutton {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .picture .box {
+        margin: 0;
+    }
+
+    .picture {
+        padding: 5rem 2.5rem;
+    }
+
+}
