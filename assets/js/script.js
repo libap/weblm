@@ -91,7 +91,7 @@ addEventOnElem(window, "scroll", activeElem);
 
 /**
  * HIDE NAVBAR ON SCROLL
- */
+
 
 let lastScrollPos = 0;
 
@@ -108,7 +108,7 @@ window.addEventListener("scroll", function () {
     lastScrollPos = window.scrollY;
   }
 });
-
+ */
 
 
 

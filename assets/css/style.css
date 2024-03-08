@@ -510,9 +510,11 @@ body {
 \*-----------------------------------*/
 
 .category {
-  padding-bottom: 40px !important;
-  padding-top: 70px !important;
+  padding-bottom: 0px !important;
+  padding-top: 100px !important;
   }
+
+
 
 .category .section-title { --color: var(--kappel); }
 
