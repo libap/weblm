@@ -1436,6 +1436,7 @@ window.addEventListener('mouseup', () => {
     updatePointerUpData(pointers[0]);
 });
 
+/* 
 canvas.addEventListener('touchstart', e => {
     e.preventDefault();
     const touches = e.targetTouches;
@@ -1465,6 +1466,8 @@ window.addEventListener('touchend', e => {
         updatePointerUpData(pointer);
     }
 });
+
+*/
 
 window.addEventListener('keydown', e => {
     if (e.code === 'KeyP')
