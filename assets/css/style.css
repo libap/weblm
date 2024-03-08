@@ -1906,6 +1906,9 @@ body {
   }
 }
 
+.tarifs-trait{
+  text-decoration: line-through;
+}
 
   /*-----------------------------------*\
   #CAROUSEL PORTFOLIO
@@ -2914,7 +2917,7 @@ input {
   flex-direction: column;
   justify-content: space-around;
   width: 60%;
-  padding: 20px;
+  padding-right: 15px;
 }
 
 .visitecard-left-container-titre, .visitecard-left-container-contact{
