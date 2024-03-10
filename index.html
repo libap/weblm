@@ -3,12 +3,15 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K54NQKFV');</script>
-<!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K54NQKFV');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -71,9 +74,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body id="top">
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K54NQKFV"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K54NQKFV" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div class="preloader" data-preloader>
     <span class="line"></span>
   </div>
@@ -122,14 +125,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <!--
+
         <a href="#contact" class="btn has-before">
           <span class="span">Nous contacter</span>
 
           <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
         </a>
-          -->
+
 
         <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
           <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -150,10 +154,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="slab">
           <h1 class="landing-italic" data-aos="fade-down" data-aos-delay="1300">
             Création de sites vitrines</h1>
-          <h1 class="landing-h1" data-aos="fade-down" data-aos-delay="1500">Bienvenu chez l'agence
-            <strong>WEBLM</strong> !
-          </h1>
-          <h1 class="landing-trait" data-aos="fade-down" data-aos-delay="1700"> </h1>
+
+          <div class="container-titre-trait">
+            <h1 class="landing-h1" data-aos="fade-down" data-aos-delay="1500">Bienvenu chez l'agence
+              <strong>WEBLM</strong> !
+            </h1>
+            <h1 class="landing-trait" data-aos="fade-down" data-aos-delay="1700"> </h1>
+
+          </div>
+
+          <a href="#" class="btn has-before">
+            <span class="span">Reserver votre appel gratuit</span>
+
+            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+          </a>
         </div>
         <canvas></canvas>
       </section>
@@ -310,9 +324,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 class="h2 section-title text-center" data-aos="zoom-in-up" data-aos-delay="500">Nos cartes de visite</h2>
           <p class="section-text text-center"></p>
           <div class="container-cartes">
-            <div class="visitecard-container" style="background-image: url('./assets/images/visite.PN')">
+            <div class="visitecard-container" data-aos="flip-left"
+              style="background-image: url('./assets/images/visite.PN')">
 
-              <div class="visitecard-left">
+              <div class="visitecard-left ">
                 <div class="visitecard-left-container-titre">
                   <a class="nom-left">Maxime Besombes</a>
                   <a class="poste-left">DIRECTEUR COMMERCIAL</a>
@@ -330,12 +345,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
 
 
-              <div class="visitecard-right">
-                <img src="assets/images/photomax.png" class="visitecard-container-photo"></img>
+              <div  class="visitecard-right">
+                <img src="assets/images/photomax.png" data-rellax-speed="1" class="visitecard-container-photo rellax"></img>
               </div>
 
             </div>
-            <div class="visitecard-container" style="background-image: url('./assets/images/visite.PN')">
+
+            <div class="visitecard-container" data-aos="flip-right"
+              style="background-image: url('./assets/images/visite.PN')">
 
               <div class="visitecard-left">
                 <div class="visitecard-left-container-titre">
@@ -356,7 +373,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
               <div class="visitecard-right">
-                <img src="assets/images/photomax.png" class="visitecard-container-photo"></img>
+                <img src="assets/images/photomax.png" data-rellax-speed="1"
+                  class="visitecard-container-photo rellax"></img>
               </div>
 
             </div>
