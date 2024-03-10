@@ -24,11 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Envoyer l'e-mail
     if (mail($to, $subject, $message, $headers)) {
         // Si l'e-mail est envoyé avec succès, rediriger vers index.html
-        header("Location: google.com");
+        header("Location: https://www.google.com/");
+
         exit;
     } else {
-        echo "Une erreur s'est produite lors de l'envoi du formulaire.";
-        header("Location: google.com");
+        //Afficher l'erreur
+        print_r(error_get_last());
+
     }
 }
 ?>
