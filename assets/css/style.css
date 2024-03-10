@@ -3003,6 +3003,7 @@ canvas {
   width: 80;
   background-color: var(--bg-white);
   border-radius: var(--radius-5);
+  max-width: 500px;
 }
 
 .banner{
@@ -3017,5 +3018,9 @@ canvas {
 
 .banner-soustitre{
   color: var(--bg-white);
+  padding-bottom: 20px;
+}
+
+.interligne{
   padding-bottom: 20px;
 }
