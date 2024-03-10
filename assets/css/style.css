@@ -2350,12 +2350,7 @@ canvas {
   }
 }
 
-input {
-    padding: 4px 10px;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-}
+
 
 .cta{
   margin-top: 15px;
@@ -2454,13 +2449,7 @@ input {
     font-size: 14px; /* Adjust font size */
   }
 
-  input {
-    width: calc(100% - 10px); /* Make input field full width with a little padding */
-    margin-bottom: 20px; /* Adjust spacing */
-    padding: 5px; /* Add padding to the input */
-    font-size: 10px;
-    text-align: center;
-  }
+
 
   .button.cta {
     font-size: 10px; /* Adjust font size */
@@ -2994,4 +2983,39 @@ input {
     align-items: center;
     margin: 0;
   }
+}
+
+/* FORM */
+.newsletter-form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+  
+}
+
+.input-form{
+  padding: 10px 10px;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  width: 80;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-5);
+}
+
+.banner{
+  background-color: var(--bg-black);
+  padding: 40px!important;
+  margin-top: 130px;
+}
+
+.banner-titre{
+  color: var(--bg-white);
+}
+
+.banner-soustitre{
+  color: var(--bg-white);
+  padding-bottom: 20px;
 }
