@@ -3007,7 +3007,7 @@ canvas {
   font-size: 16px;
   width: 100%;
   text-align: center;
-  width: 80%;
+
   background-color: var(--bg-white);
   border-radius: var(--radius-5);
   max-width: 500px;

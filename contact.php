@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['input-email'];
 
     // Adresse e-mail de destination
-    $to = "baptiste.limandri@weblm.fr";
+    $to = "limandribaptiste@gmail.com";
 
     // Sujet de l'e-mail
     $subject = "Nouveau formulaire soumis";
