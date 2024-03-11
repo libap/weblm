@@ -8,33 +8,32 @@ $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
 $client->setAccessType('offline');
 $client->setAuthConfig(__DIR__ . '/credentials.json');
 
-$service = new Google_Service_Sheets($client);$spreadsheetId = "1lGJmKGgBaRsFR51hMWQ1o2DRXTfJcS7vDtbG6Z1OQ5I";
+$service = new Google_Service_Sheets($client);
+$spreadsheetId = "1lGJmKGgBaRsFR51hMWQ1o2DRXTfJcS7vDtbG6Z1OQ5I";
 
 $range = "feuille1"; // Sheet name
 
 $values = [
-    ['this is data to insert', 'my name'],
+	['this is data to insert', 'my name'],
 ];
-
-$body = new Google\Service\Sheets\ValueRange([
-    'values' => $values
+//echo "<pre>";print_r($values);echo "</pre>";exit;
+$body = new Google_Service_Sheets_ValueRange([
+	'values' => $values
 ]);
 $params = [
-    'valueInputOption' => 'RAW'
+	'valueInputOption' => 'RAW'
 ];
 
 $result = $service->spreadsheets_values->append(
-    $spreadsheetId,
-    $range,
-    $body,
-    $params
+	$spreadsheetId,
+	$range,
+	$body,
+	$params
 );
 
 if($result->updates->updatedRows == 1){
-    echo "Success";
+	echo "Success";
 } else {
-    echo "Fail";
+	echo "Fail";
 }
-
-
 ?>
