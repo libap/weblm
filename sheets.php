@@ -1,52 +1,40 @@
-<?php
+<?php 
 
 require __DIR__ . '/vendor/autoload.php';
 
-// Chemin vers le fichier JSON contenant les clés d'authentification
-$credentialsPath = 'credentials.json';
+$client = new Google\Client();
+$client->setApplicationName('Google Sheets with Primo');
+$client->setScopes([Google\Service\Sheets::SPREADSHEETS]);
+$client->setAccessType('offline');
+$client->setAuthConfig(__DIR__ . '/credentials.json');
 
-// Initialiser le client Google Sheets
-$client = new Google_Client();
-$client->setAuthConfig($credentialsPath);
-$client->addScope(Google_Service_Sheets::SPREADSHEETS);
+$service = new Google\Service\Sheets($client);
+$spreadsheetId = "1lGJmKGgBaRsFR51hMWQ1o2DRXTfJcS7vDtbG6Z1OQ5I";
 
-// Authentification
-if ($client->isAccessTokenExpired()) {
-    $client->fetchAccessTokenWithRefreshToken($client->getRefreshToken());
-    file_put_contents($credentialsPath, json_encode($client->getAccessToken()));
-}
+$range = "feuille1"; // Sheet name
 
-// Créer une instance du service Google Sheets
-$service = new Google_Service_Sheets($client);
-
-// ID de votre fichier Google Sheets
-$spreadsheetId = 'ID_DU_FICHIER_GOOGLE_SHEETS';
-
-// Données à envoyer
-$data = [
-    ['Donnée 1', 'Donnée 2', 'Donnée 3'],
-    ['Donnée 4', 'Donnée 5', 'Donnée 6'],
-    // Ajoutez autant de lignes que nécessaire
+$values = [
+    ['this is data to insert', 'my name'],
 ];
 
-// Plage de cellules où écrire les données (par exemple, 'Sheet1!A1:C2')
-$range = 'Sheet1!A1:C' . count($data);
-
-// Créer l'objet de la demande
-$requestBody = new Google_Service_Sheets_ValueRange([
-    'values' => $data
+$body = new Google\Service\Sheets\ValueRange([
+    'values' => $values
 ]);
-
-// Envoyer les données au fichier Google Sheets
-$response = $service->spreadsheets_values->update($spreadsheetId, $range, $requestBody, [
+$params = [
     'valueInputOption' => 'RAW'
-]);
+];
 
-// Vérifier si les données ont été envoyées avec succès
-if ($response->getUpdatedCells() > 0) {
-    echo 'Données envoyées avec succès !';
+$result = $service->spreadsheets_values->append(
+    $spreadsheetId,
+    $range,
+    $body,
+    $params
+);
+
+if($result->updates->updatedRows == 1){
+    echo "Success";
 } else {
-    echo 'Erreur lors de l\'envoi des données.';
+    echo "Fail";
 }
 
 
