@@ -1,54 +1,38 @@
-<?php
+<?php 
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Google\Client;
-use Google\Service\Sheets;
-use Google\Service\Sheets\ValueRange;
+$client = new \Google_Client();
+$client->setApplicationName('Google Sheets with Primo');
+$client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
+$client->setAccessType('offline');
+$client->setAuthConfig(__DIR__ . '/credentials.json');
 
-// Chemin vers le fichier JSON contenant les clés d'authentification
-$credentialsPath = 'credentials.json';
+$service = new Google_Service_Sheets($client);
+$spreadsheetId = "1lGJmKGgBaRsFR51hMWQ1o2DRXTfJcS7vDtbG6Z1OQ5I";
 
-// Initialiser le client Google Sheets
-$client = new Client();
-$client->setAuthConfig($credentialsPath);
-$client->addScope(Sheets::SPREADSHEETS);
+$range = "feuille1"; // Sheet name
 
-// Créer une instance du service Google Sheets
-$service = new Sheets($client);
-
-// ID de votre fichier Google Sheets
-$spreadsheetId = '1lGJmKGgBaRsFR51hMWQ1o2DRXTfJcS7vDtbG6Z1OQ5I';
-
-// Données à envoyer
-$data = [
-    ['Donnée 1', 'Donnée 2', 'Donnée 3'],
-    ['Donnée 4', 'Donnée 5', 'Donnée 6'],
-    // Ajoutez autant de lignes que nécessaire
+$values = [
+	['this is data to insert', 'my name'],
+];
+//echo "<pre>";print_r($values);echo "</pre>";exit;
+$body = new Google_Service_Sheets_ValueRange([
+	'values' => $values
+]);
+$params = [
+	'valueInputOption' => 'RAW'
 ];
 
-// Plage de cellules où écrire les données (par exemple, 'feuille1!A1:C2')
-$range = 'feuille1!A1:C' . (count($data) + 1);
+$result = $service->spreadsheets_values->append(
+	$spreadsheetId,
+	$range,
+	$body,
+	$params
+);
 
-// Créer l'objet ValueRange pour les données
-$valueRange = new ValueRange([
-    'values' => $data
-]);
-
-// Envoyer les données au fichier Google Sheets
-try {
-    $response = $service->spreadsheets_values->update($spreadsheetId, $range, $valueRange, [
-        'valueInputOption' => 'RAW'
-    ]);
-
-    // Vérifier si les données ont été envoyées avec succès
-    if ($response->getUpdatedCells() > 0) {
-        echo 'Données envoyées avec succès !';
-    } else {
-        echo 'Erreur lors de l\'envoi des données.';
-    }
-} catch (Exception $e) {
-    echo 'Une erreur s\'est produite : ' . $e->getMessage();
+if($result->updates->updatedRows == 1){
+	echo "Success";
+} else {
+	echo "Fail";
 }
-
-?>
