@@ -2,43 +2,51 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Google\Client;
-use Google\Service\Sheets;
-use Google\Service\Sheets\ValueRange;
+// Chemin vers le fichier JSON contenant les clés d'authentification
+$credentialsPath = '/chemin/vers/votre/fichier.json';
 
-$client = new Client();
-$client->setApplicationName('Google Sheets with Primo');
-$client->setScopes([Sheets::SPREADSHEETS]);
-$client->setAccessType('offline');
-$client->setAuthConfig(__DIR__ . '/credentials.json');
+// Initialiser le client Google Sheets
+$client = new Google_Client();
+$client->setAuthConfig($credentialsPath);
+$client->addScope(Google_Service_Sheets::SPREADSHEETS);
 
-$service = new Sheets($client);
-$spreadsheetId = "1lGJmKGgBaRsFR51hMWQ1o2DRXTfJcS7vDtbG6Z1OQ5I";
+// Authentification
+if ($client->isAccessTokenExpired()) {
+    $client->fetchAccessTokenWithRefreshToken($client->getRefreshToken());
+    file_put_contents($credentialsPath, json_encode($client->getAccessToken()));
+}
 
-$range = "feuille1"; // Sheet name
+// Créer une instance du service Google Sheets
+$service = new Google_Service_Sheets($client);
 
-$values = [
-    ['this is data to insert', 'my name'],
+// ID de votre fichier Google Sheets
+$spreadsheetId = 'ID_DU_FICHIER_GOOGLE_SHEETS';
+
+// Données à envoyer
+$data = [
+    ['Donnée 1', 'Donnée 2', 'Donnée 3'],
+    ['Donnée 4', 'Donnée 5', 'Donnée 6'],
+    // Ajoutez autant de lignes que nécessaire
 ];
-//echo "<pre>";print_r($values);echo "</pre>";exit;
-$body = new ValueRange([
-    'values' => $values
+
+// Plage de cellules où écrire les données (par exemple, 'Sheet1!A1:C2')
+$range = 'Sheet1!A1:C' . count($data);
+
+// Créer l'objet de la demande
+$requestBody = new Google_Service_Sheets_ValueRange([
+    'values' => $data
 ]);
-$params = [
+
+// Envoyer les données au fichier Google Sheets
+$response = $service->spreadsheets_values->update($spreadsheetId, $range, $requestBody, [
     'valueInputOption' => 'RAW'
-];
+]);
 
-$result = $service->spreadsheets_values->append(
-    $spreadsheetId,
-    $range,
-    $body,
-    $params
-);
-
-if($result->updates->updatedRows == 1){
-    echo "Success";
+// Vérifier si les données ont été envoyées avec succès
+if ($response->getUpdatedCells() > 0) {
+    echo 'Données envoyées avec succès !';
 } else {
-    echo "Fail";
+    echo 'Erreur lors de l\'envoi des données.';
 }
 
 
