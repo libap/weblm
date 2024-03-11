@@ -3,7 +3,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 // Chemin vers le fichier JSON contenant les clés d'authentification
-$credentialsPath = '/chemin/vers/votre/fichier.json';
+$credentialsPath = 'credentials.json';
 
 // Initialiser le client Google Sheets
 $client = new Google_Client();
