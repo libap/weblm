@@ -1,38 +1,45 @@
-<?php 
+<?php
 
 require __DIR__ . '/vendor/autoload.php';
 
-$client = new \Google_Client();
+use Google\Client;
+use Google\Service\Sheets;
+use Google\Service\Sheets\ValueRange;
+
+$client = new Client();
 $client->setApplicationName('Google Sheets with Primo');
-$client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
+$client->setScopes([Sheets::SPREADSHEETS]);
 $client->setAccessType('offline');
 $client->setAuthConfig(__DIR__ . '/credentials.json');
 
-$service = new Google_Service_Sheets($client);
+$service = new Sheets($client);
 $spreadsheetId = "1lGJmKGgBaRsFR51hMWQ1o2DRXTfJcS7vDtbG6Z1OQ5I";
 
 $range = "feuille1"; // Sheet name
 
 $values = [
-	['this is data to insert', 'my name'],
+    ['this is data to insert', 'my name'],
 ];
 //echo "<pre>";print_r($values);echo "</pre>";exit;
-$body = new Google_Service_Sheets_ValueRange([
-	'values' => $values
+$body = new ValueRange([
+    'values' => $values
 ]);
 $params = [
-	'valueInputOption' => 'RAW'
+    'valueInputOption' => 'RAW'
 ];
 
 $result = $service->spreadsheets_values->append(
-	$spreadsheetId,
-	$range,
-	$body,
-	$params
+    $spreadsheetId,
+    $range,
+    $body,
+    $params
 );
 
 if($result->updates->updatedRows == 1){
-	echo "Success";
+    echo "Success";
 } else {
-	echo "Fail";
+    echo "Fail";
 }
+
+
+?>
