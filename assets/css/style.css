@@ -929,7 +929,7 @@ body {
   background-color: var(--white);
   padding: 20px;
   border-radius: var(--radius-10);
-  box-shadow: rgb(195 230 255) 0px 0px 10px 5px;
+  box-shadow: rgb(158 175 188) 0px 0px 10px 5px;
   margin-block-start: -100px;
   z-index: 1;
 }
@@ -1572,6 +1572,8 @@ body {
   margin-block-start: 24px;
   box-shadow: var(--shadow-4);
   transition: var(--transition-2);
+  box-shadow: rgb(158 175 188) 0px 0px 10px 5px;
+  border-radius: var(--radius-5);
 }
 
 .features-card:hover { background-color: var(--kappel); }
