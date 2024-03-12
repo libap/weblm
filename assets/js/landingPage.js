@@ -1415,7 +1415,7 @@ function correctRadius(radius) {
         radius *= aspectRatio;
     return radius;
 }
-/* ACTIVER EFFET ZINZIN AU CLIQUE
+/* ACTIVER EFFET ZINZIN AU CLIQUE 
 canvas.addEventListener('mousedown', e => {
     let posX = scaleByPixelRatio(e.offsetX);
     let posY = scaleByPixelRatio(e.offsetY);

@@ -133,7 +133,6 @@ a,
 img,
 span,
 data,
-input,
 button,
 ion-icon { display: block; }
 
@@ -144,7 +143,7 @@ a {
 
 img { height: auto; }
 
-input,
+
 button {
   background: none;
   border: none;
@@ -510,8 +509,9 @@ body {
 \*-----------------------------------*/
 
 .category {
-  padding-bottom: 100px !important;
+  padding-bottom: 0px !important;
   padding-top: 100px !important;
+  
   }
 
 
@@ -2098,7 +2098,6 @@ canvas {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap: 10px;
 
    height:fit-content;
   text-align: center;
@@ -2109,15 +2108,6 @@ canvas {
       left: 50%;
       transform: translateX(-55%);
 }
-
-.container-titre-trait{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 40px;
-  
-}
-
 /*Tablet REsponsiv e*/
 .landing-h1{
   font-size: 5.4rem !important;
@@ -2350,7 +2340,12 @@ canvas {
   }
 }
 
-
+input {
+    padding: 4px 10px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
 
 .cta{
   margin-top: 15px;
@@ -2431,7 +2426,7 @@ canvas {
 
   .slab {
     position: absolute;
-    top: 22%;
+    top: 30%;
     max-width: 80%; /* Adjust the maximum width for smaller screens */
     padding: 10px; /* Adjust padding */
     height: fit-content;
@@ -2613,7 +2608,6 @@ canvas {
 .slab{
 
   display: flex;
-  margin:  100px auto;
   width: 100%;
 
 }
@@ -2985,58 +2979,82 @@ canvas {
   }
 }
 
-/* FORM */
-.newsletter-form{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
+/* BANNER */
 
-  
-}
 
 .container-banner{
   display: flex;
   flex-direction: column;
+}
+.container-banner .container-form form{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-
+  justify-content: center;
 }
 
-.input-form{
-  padding: 10px 10px;
-  font-size: 16px;
-  width: 100%;
-  text-align: center;
-
-  background-color: var(--bg-white);
-  border-radius: var(--radius-5);
-  max-width: 500px;
+.container-banner .container-form-footer{
+  display: flex;
+  justify-content: center;
 }
 
 .banner{
   background-color: var(--bg-black);
-
+  color: var(--bg-white) !important;
 
 }
 
-.banner-titre{
-  color: var(--bg-white);
+#landing-calendly{
+  margin-top: 50px;
 }
 
-.banner-soustitre{
-  color: var(--bg-white);
-  padding-bottom: 20px;
-  max-width: 800px;
+.banner-margin{
+  margin-top: 100px;
 }
 
-.interligne{
-  padding-bottom: 20px;
+.banner .section-title{
+
+  color: var(--bg-white) !important;
 }
 
-.banner-container-calendly{
-  display: flex;
-  justify-content: center;
 
+input, textarea {
+  width: calc(80% - 10px); /* Make input field full width with a little padding */
+  margin-bottom: 20px; /* Adjust spacing */
+  padding: 5px; /* Add padding to the input */
+  font-size: 10px;
+  text-align: center;
+  border-radius: var(--radius-5);
+  padding: 15px;
+  max-width: 350px;
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-12);
+  background-color: var(--bg-white);
+}
 
-  margin: 20px;
+input:focus, textarea:focus {
+  outline: none; /* Enlever la bordure jaune par défaut */
+}
+
+#submit{
+  margin-top: 25px;
+}
+#li-contact{
+  display: none;
+}
+
+.container-price-prestation{
+  display: flex; 
+  align-items: center;
+   gap: 5px;
+}
+.container-price-prestation .older-price{
+  text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+  #li-contact{
+    display: block;
+  }
 }
