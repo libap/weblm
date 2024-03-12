@@ -3055,6 +3055,8 @@ input:focus, textarea:focus {
   text-decoration: line-through;
 }
 
+
+
 @media (max-width: 768px) {
   #li-contact{
     display: block;
