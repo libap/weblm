@@ -929,7 +929,7 @@ body {
   background-color: var(--white);
   padding: 20px;
   border-radius: var(--radius-10);
-  box-shadow: var(--shadow-3);
+  box-shadow: rgb(195 230 255) 0px 0px 10px 5px;
   margin-block-start: -100px;
   z-index: 1;
 }
