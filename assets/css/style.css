@@ -2344,7 +2344,6 @@ canvas {
 
 input {
     padding: 4px 10px;
-    font-size: 16px;
     width: 100%;
     text-align: center;
 }
@@ -3025,11 +3024,11 @@ input, textarea {
   width: calc(80% - 10px); /* Make input field full width with a little padding */
   margin-bottom: 20px; /* Adjust spacing */
   padding: 5px; /* Add padding to the input */
-  font-size: 10px;
+  font-size: var(--fs-5) !important; /* Adjust font size */
   text-align: center;
   border-radius: var(--radius-5);
   padding: 15px;
-  max-width: 350px;
+  max-width: 400px;
   font-family: var(--ff-poppins);
   font-size: var(--fs-12);
   background-color: var(--bg-white);
