@@ -2447,7 +2447,7 @@ input {
   
   .slab {
     position: absolute;
-    top: 30%;
+    top: 38%;
     max-width: 80%; /* Adjust the maximum width for smaller screens */
     padding: 10px; /* Adjust padding */
     height: fit-content;
