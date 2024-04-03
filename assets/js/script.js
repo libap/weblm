@@ -228,23 +228,3 @@ labels.forEach(label => {
 });
 
 
-/**
- * Lettres accueil
- */
-
-// Divise le texte en lettres individuelles
-const splitText = new SplitText(".landing-h1", { type: "chars" });
-
-// Crée un tableau contenant chaque lettre
-const chars = splitText.chars;
-
-// Masque initialement toutes les lettres
-gsap.set(chars, { autoAlpha: 0 });
-
-// Animation de chaque lettre une par une
-gsap.to(chars, {
-  duration: 0.5, // Durée de l'animation pour chaque lettre
-  autoAlpha: 1, // Animation d'opacité
-  stagger: 0.1, // Espacement entre chaque animation de lettre
-  ease: "power2.inOut", // Easing de l'animation
-});
