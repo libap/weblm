@@ -123,6 +123,13 @@ html {
   box-sizing: border-box;
 }
 
+.logo #lettersWEB {
+  color: var(--bg-black); /* Couleur noire pour les deux dernières lettres */
+}
+.logo #lettersLM {
+  color: var(--kappel); /* Couleur bleue pour les trois premières lettres */
+}
+
 li {
   list-style: none;
 }
@@ -345,6 +352,7 @@ body {
 :is(.course, .blog) .section-title {
   margin-block-end: 40px;
 }
+
 
 /*-----------------------------------*\
   #HEADER
@@ -2064,12 +2072,7 @@ body {
   }
 }
 
-.logo .lettersWEB {
-  color: var(--bg-black); /* Couleur noire pour les deux dernières lettres */
-}
-.logo .lettersLM {
-  color: var(--kappel); /* Couleur bleue pour les trois premières lettres */
-}
+
 
 strong {
   color: var(--kappel);
