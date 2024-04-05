@@ -2011,6 +2011,7 @@ body {
   padding-inline: auto;
   margin: 10px 0px;
   border-radius: var(--radius-10);
+  color: var(--bg-black) !important;
 }
 
 .container-portfolio strong {
