@@ -3058,7 +3058,7 @@ textarea:focus {
 }
 
 .gradient-h1-noir {
-    background: linear-gradient(to right, ##000000, #008ef2) !important;
+    background: linear-gradient(to right, #000000, #008ef2) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     display: inline-block !important; /* Pour s'assurer que le dégradé s'applique correctement */
