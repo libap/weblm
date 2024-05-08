@@ -3054,5 +3054,15 @@ textarea:focus {
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     display: inline-block !important; /* Pour s'assurer que le dégradé s'applique correctement */
+    animation: moveGradient 5s linear infinite !important; /* Changez la durée et le type d'animation selon vos besoins */
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
