@@ -3057,5 +3057,13 @@ textarea:focus {
     animation: moveGradient 5s linear infinite !important; /* Changez la durée et le type d'animation selon vos besoins */
 }
 
+.gradient-h1-noir {
+    background: linear-gradient(to right, ##000000, #008ef2) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    display: inline-block !important; /* Pour s'assurer que le dégradé s'applique correctement */
+    animation: moveGradient 5s linear infinite !important; /* Changez la durée et le type d'animation selon vos besoins */
+}
+
 
 
