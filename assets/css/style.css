@@ -348,7 +348,9 @@ body {
 .stats-card {
   background-color: hsla(var(--color), 0.1);
 }
-
+.lettersLM{
+      color: var(--kappel) !important;
+}
 :is(.course, .blog) .section-title {
   margin-block-end: 40px;
 }
