@@ -2099,7 +2099,7 @@ strong {
 /*-----------------------------------*\
     #LANDING FLUIDE ANIMATION
 \*-----------------------------------*/
-#landing {
+#weblm {
   height: 100vh;
   width: 100vw;
 }
@@ -2485,7 +2485,7 @@ input {
     overflow-x: hidden;
   }
 
-  #landing {
+  #weblm {
     height: 61vh;
   }
 }
@@ -2619,7 +2619,7 @@ input {
 
 @media only screen and (max-width: 768px) {
 
-  #landing {
+  #weblm {
     height: 100vh !important;
   }
   .slab {
@@ -2756,7 +2756,7 @@ input {
 
 @media (min-width: 300px) and (max-width: 600px) {
 
-  #landing {
+  #weblm {
     height: 100vh !important;
   }
 
